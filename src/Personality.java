@@ -9,7 +9,7 @@ public class Personality {
 	 */
 	
 	public Personality(String name) {
-		// TODO: complete constructor
+		myName = name;
 	}
 	
 	/**
@@ -25,9 +25,8 @@ public class Personality {
 	 * Returns this object's identifier
 	 * @return this objects identifying String/label
 	 */
-	public String getName() {
-		// TODO: complete this method
-		return "ola";
+	public String getName() {		
+		return myName;
 	}
 	
 	/**
@@ -37,6 +36,11 @@ public class Personality {
 	 */
 	
 	public String getDescription() {
-		return "playful";
+		if (myName.length() < 5) {
+			return "playful";
 	}
+		else {
+			return "argumentative";
+		}
+}
 }
